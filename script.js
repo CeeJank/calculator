@@ -2,23 +2,9 @@
 const output = document.querySelector(".output");
 
 //functions
-arr = []
-const num = document.querySelectorAll(".num");
-num.forEach(number => {
-    number.addEventListener("click",appendToOutput())
-});
+const numbers = document.querySelector(".numbers");
+numbers.addEventListener("click", (num) => appendToOutput(parseInt(num.target.value)));
 
-function appendToOutput() {
-    return
+function appendToOutput(num) {
+    output.textContent += num;
 }
-
-
-
-
-
-
-//calculator answer
-const answer = document.querySelector("#=")
-answer.addEventListener("click", function() {
-    return;
-})
