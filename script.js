@@ -11,11 +11,13 @@ const answer = document.querySelector("#answer")
 answer.addEventListener("click", () => findAnswer(parseInt(output.textContent)));
 
 const functions = document.querySelector(".functions");
-functions.addEventListener("click", (func) => addOperator(func.target.value))
+functions.addEventListener("click", (func) => addFunc(func.target.value))
 
 const numbers = document.querySelector(".numbers");
 numbers.addEventListener("click", (num) => appendToOutput(parseInt(num.target.value)));
 
+const op = document.querySelector(".operator");
+op.addEventListener("click", (op) => addOperator(op.target.value))
 
 function appendToOutput(num) {
     if (isNaN(num)){
@@ -24,9 +26,11 @@ function appendToOutput(num) {
     output.textContent += num;
 }
 
-function addOperator(func) {
+function addFunc(func) {
     output.textContent += func;
 }
+
+
 
 function findAnswer() {
     result = eval(output.textContent)
