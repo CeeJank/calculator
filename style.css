@@ -66,6 +66,13 @@ h1 {
     
 }
 
+.answer {
+    border: var(--border);
+    width: 7rem;
+    font-size: 3rem;
+    height: 6rem;
+}
+
 .functions {
     display: flex;
     flex-wrap: wrap;
